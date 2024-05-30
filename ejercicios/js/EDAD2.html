@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de Operador Ternario con Formulario</title>
+  </head>
+  <body>
+    <h1>¿Eres mayor de edad?</h1>
+    <form id="edadForm">
+      <label for="edad">Ingresa tu edad:</label>
+      <input type="number" id="edad" name="edad" />
+      <button type="button" onclick="checkEdad()">Enviar</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+      function checkEdad() {
+        let edad = document.getElementById("edad").value;
+        let mensaje = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+        document.getElementById("resultado").textContent = mensaje;
+      }
+    </script>
+  </body>
+</html>

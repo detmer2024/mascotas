@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de IF con Múltiples Condiciones y Formulario</title>
+  </head>
+  <body>
+    <h1>¿Buen día para ir al parque?</h1>
+    <form id="parqueForm">
+      <label for="temperatura">Temperatura (°C):</label>
+      <input type="number" id="temperatura" name="temperatura" />
+      <label for="lluvia">¿Está lloviendo?</label>
+      <input type="checkbox" id="lluvia" name="lluvia" />
+      <button type="button" onclick="checkParque()">Enviar</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+      function checkParque() {
+        let temperatura = document.getElementById("temperatura").value;
+        let lluvia = document.getElementById("lluvia").checked;
+
+        if (temperatura > 25 && !lluvia) {
+          document.getElementById("resultado").textContent =
+            "Hoy es un buen día para ir al parque.";
+        } else {
+          document.getElementById("resultado").textContent =
+            "Hoy no es un buen día para ir al parque.";
+        }
+      }
+    </script>
+  </body>
+</html>
